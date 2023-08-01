@@ -1,4 +1,4 @@
-package javabasic;
+package javabasic.chapter01;
 
 import javax.swing.*;
 
