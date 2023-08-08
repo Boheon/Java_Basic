@@ -1,5 +1,6 @@
 package javabasic.chapter05;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class ArrayUtil {
@@ -18,7 +19,7 @@ public class ArrayUtil {
         }
     }
 
-    static int addAll(int[] data){
+    static int addAll(int[] data) {
         int sum = 0;
         for (int point : data) {
             sum += point;
@@ -38,10 +39,10 @@ public class ArrayUtil {
         return maxIndex;
     }
 
-    static int findMinValue(int[] data) {
-        int min = data[0];
-        int minIndex = 0;
-        for (int i = 0; i < data.length; i++) {
+    static int findMinValue(int[] data, int start, int end) {
+        int min = data[start];
+        int minIndex = start;
+        for (int i = start; i < end; i++) {
 
             if (min > data[i]) {
                 min = data[i];
@@ -49,5 +50,22 @@ public class ArrayUtil {
             }
         }
         return minIndex;
+    }
+
+
+    static void swapArray(int[] data, int a, int b) {
+        int temp = data[a];
+        data[a] = data[b];
+        data[b] = temp;
+    }
+
+    static int[] getRandomArray(int length, int util) {
+        int[] data = new int[length];
+        Random ran = new Random(5);
+        for (int i = 0; i < data.length; i++) {
+            data[i] = ran.nextInt(util);//0-330
+        }
+        return data;//데이터가 아니라 주소값이 전달
+//        return null; // null pointer exception
     }
 }
