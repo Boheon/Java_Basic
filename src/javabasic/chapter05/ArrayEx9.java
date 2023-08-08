@@ -12,7 +12,7 @@ public class ArrayEx9 {
         getNumbers("숫자 >> ", nums);
 
         int max = findMaxValue(nums);
-        int min = findMinValue(nums);
+        int min = findMinValue(nums,0 ,5);
 
 
         System.out.println("최대값은 " + nums[max] + "\n최소값은 " + nums[min]);
