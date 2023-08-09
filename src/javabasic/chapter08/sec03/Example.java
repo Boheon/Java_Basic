@@ -1,9 +1,15 @@
 package javabasic.chapter08.sec03;
 
+
+
 public class Example {
     public static void main(String[] args) {
         Child child = new Child();
+        System.out.println(child);
+
         Parent parent = child;//자동 타입변환
+        System.out.println(child);
+
 
         parent.method1();
         parent.method2();//오버라이딩된 메소드 호출
